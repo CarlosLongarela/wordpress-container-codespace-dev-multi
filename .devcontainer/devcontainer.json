@@ -1,0 +1,33 @@
+{
+	"name": "${localWorkspaceFolderBasename}",
+	"service": "wordpress",
+	"forwardPorts": [
+		// Add needed ports on .env too
+		8080,
+		8090
+	],
+	"dockerComposeFile": "docker-compose.yml",
+	"remoteUser": "www-data",
+	"postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/setup.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				// You can add new "required" extensions to add to your VSCode on build.
+				"xdebug.php-debug",
+				"shevaua.phpcs",
+				"SonarSource.sonarlint-vscode",
+				"annsk.alignment",
+				"EditorConfig.EditorConfig",
+				"dbaeumer.vscode-eslint",
+				"GitHub.copilot",
+				"eamodio.gitlens",
+				"Vtrois.gitmoji-vscode",
+				"bmewburn.vscode-intelephense-client",
+				"yogensia.searchwpdocs",
+				"wayou.vscode-todo-highlight",
+				"minhthai.vscode-todo-parser",
+				"shardulm94.trailing-spaces"
+			]
+		}
+	}
+}
