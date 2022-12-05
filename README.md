@@ -1,4 +1,4 @@
-# Scaffolding for WordPress development with VSCode and containers/codespaces
+# Scaffolding for WordPress development with VSCode and containers/codespaces and multi root project
 
 _Code forfed from https://github.com/dfragac/wordpress-container-dev thanks to @dfragac_
 
