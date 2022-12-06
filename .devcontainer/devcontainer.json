@@ -8,7 +8,7 @@
 	],
 	"dockerComposeFile": "docker-compose.yml",
 	"remoteUser": "www-data",
-	"postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/setup.sh",
+	"postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/setup.sh && ${containerWorkspaceFolder}/.devcontainer/clone-repos.sh",
 	"customizations": {
 		"vscode": {
 			"extensions": [
