@@ -24,6 +24,12 @@ sudo phpcs --config-set default_standard WordPress
 # cd /var/www/html${WORDPRESS_DEV_ITEM_PATH}
 # npm i && npm run build
 
+# Install NPM utils
+npm install -g n
+n lts
+n latest
+n prune
+
 # Wait to DB to be ready (maybe it's not needed but just to be sure).
 echo "Waiting for DB image to be ready..."
 sleep 5s
@@ -45,12 +51,6 @@ fi
 # WordPress - Install WordPress.
 echo "Starting WordPress project '$WORDPRESS_WWW_TITLE' in '/var/www/html'..."
 cd /var/www/html/
-
-# Install NPM utils
-npm install -g n
-n lts
-n latest
-n prune
 
 echo "Setting up WordPress at $WORDPRESS_SITE_HOST"
 wp core install \

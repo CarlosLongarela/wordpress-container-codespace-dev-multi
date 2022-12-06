@@ -7,7 +7,7 @@ clone-repo()
     cd "${workspaces_folder}"
     if [ ! -d "${1#*/}" ]; then
         git clone "https://github.com/$1"
-    else 
+    else
         echo "Already cloned $1"
     fi
 }
@@ -20,8 +20,8 @@ if [ "${CODESPACES}" = "true" ]; then
     git config --global credential.helper '!f() { sleep 1; echo "username=${GITHUB_USER}"; echo "password=${GH_TOKEN}"; }; f'
 fi
 
-if [ -f "${script_folder}/repos-to-clone.list" ]; then
+if [ -f "${script_folder}/.devcontainer/repos-to-clone.list" ]; then
     while IFS= read -r repository; do
         clone-repo "$repository"
-    done < "${script_folder}/repos-to-clone.list"
+    done < "${script_folder}/.devcontainer/repos-to-clone.list"
 fi
