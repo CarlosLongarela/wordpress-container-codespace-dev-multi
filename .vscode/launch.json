@@ -11,7 +11,7 @@
             "port": 9003,
             "log": true,
             "pathMappings": {
-                "/var/www/html__WORDPRESS_DEV_ITEM_PATH__": "${workspaceFolder}"  // Update this like ".env" file for a simple plugin/theme development.
+                "/var/www/html/wp-content/plugins/wp-dev-test": "${workspaceFolder}"  // Update this like ".env" file for a simple plugin/theme development.
             }
         }
     ]
